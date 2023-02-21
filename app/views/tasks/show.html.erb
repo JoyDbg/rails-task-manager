@@ -1,9 +1,11 @@
-<h2><%= @task.title %></h2>
-<p><%= link_to "Back to list", tasks_path %></p>
-<p><%= @task.details %></p>
-<% if @task.completed %>
-<p> This task is not completed yet</p>
-<% else %>
-<p> This task is completed ! </p>
-<% end %>
-<p><%= link_to "Edit this task", edit_task_path %></p>
+<div class="container mt-3" style="width:600px;">
+  <h2><%= @task.title %></h2>
+  <p><i class="fa-solid fa-arrow-left"></i><%= link_to "Back to list", tasks_path %></p>
+  <p><%= @task.details %></p>
+  <% if @task.completed %>
+  <p> This task is completed ! </p>
+  <% else %>
+  <p> This task is not completed yet</p>
+  <% end %>
+  <p><%= link_to "Edit this task", edit_task_path %></p>
+</div>
